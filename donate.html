@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/donate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <title>Document</title>
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="../html/index.html"> <img src="../assets/download-removebg-preview.png" alt=""> </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">CONTACT</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">SIGN IN</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>About <span>Us</span></h1>
+  </section>
+
+  <div class="donate">
+
+          <img src="../assets/donate.jpg" alt="">
+
+
+    <div class="text">
+      <h2>Donate <span>Now</span> </h2>
+      <p>DFP raises resources to support non-profit organizations working in different thematic areas. INDIAdonates is also an NGO and we look up to your generous support to cover our operational cost. Donate to help us continue on this movement to change lives</p>
+    </div>
+
+  </div>
+
+  <form name="generalDonation" id="generalDonation" action="/process-donate.php" method="post" enctype="multipart/form-data">
+    <div class="gDonationForm active">
+        <div class="formMess"></div>
+        <div class="singleMonthly">
+            <input type="radio" name="SingleMonthly" id="Single" value="Single" checked="">
+            <label for="Single">Single</label>
+            <input type="radio" name="SingleMonthly" id="Monthly" value="Monthly">
+            <label for="Monthly">Monthly</label>
+        </div>
+        <div class="proDonateForm">
+            <div class="country">
+                <input type="hidden" name="CauseId" value="0">
+            <!--<select name="CauseId" id="CauseId">
+                <option value="0">IndiaDonates</option>
+                                            </select>-->
+        </div>
+        <div class="otherCause amount hide">
+            <input type="text" name="OtherCause" placeholder="Enter Other Cause">
+        </div>
+        <div class="country">
+            <select name="Nationality" id="Nationality">
+                <option value="Indian">Indian Citizen</option>
+                <option value="Foreign">Foreign Citizen</option>
+            </select>
+        </div>
+        <!-- <div class="tbl donaAmt">
+            <span class="amtw">₹ <span class="amt">1000</span></span>
+            <span class="amtw">₹ <span class="amt">2000</span></span>
+            <span class="amtw">₹ <span class="amt">5000</span></span>
+            <span class="amtw">₹ <span class="amt">Other</span></span>
+        </div> -->
+        <div class="tbl donaAmt">
+            <span class="amtw">₹ <span class="amt">1,000</span></span>
+            <span class="amtw">₹ <span class="amt">2,000</span></span>
+            <span class="amtw">₹ <span class="amt">5,000</span></span>
+            <span class="amtw">₹ <span class="amt">Other</span></span>
+        </div>
+        <input type="hidden" value="" id="donateAmt">
+        <!--<div class="infoMess">Select an amount.</div>-->
+        <div class="amount">
+            <input type="text" name="Donation" id="Donation" value="" placeholder="Amount in INR">
+        </div>
+        <div class="submit">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</div>
+<div class="donorSignupFormW hide">
+    <h3>Donor Signup<span>Join hands and make a difference</span></h3>
+    <div class="tabbing">
+        <div class="tabs">
+            <ul>
+                <li class="active">Details</li>
+                <li>Already Registered, Login here</li>
+            </ul>
+        </div>
+        <div class="tabContent">
+            <div class="tContent active">
+                <div class="formMess"></div>
+                <div class="field nameW">
+                    <div class="prefix">
+                        <select name="Prefix" id="Prefix">
+                            <option value="Mr.">Mr.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Mx.">Mx.</option>
+                        </select>
+                    </div>
+                    <div class="name">
+                        <input type="text" name="FirstName" id="FirstName" placeholder="First Name" value="">
+                    </div>
+                    <div class="name">
+                        <input type="text" name="LastName" id="LastName" placeholder="Last Name" value="">
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="text" name="EmailId" id="EmailId" placeholder="Email" value="">
+                </div>
+                <div class="field">
+                    <input type="text" name="Mobile" id="Mobile" placeholder="Mobile" value="">
+                </div>
+                <div class="passdetails hide">
+                    <div class="field">
+                        <input type="text" name="Address" id="Address" value="" placeholder="Address">
+                    </div>
+                        <!--<div class="field pass">
+                            <input type="file" name="PassportFile" id="PassportFile" value="" placeholder="Passport" />
+                            <span class="info">Upload scan copy of passport(JPG or PDF).</span>
+                        </div>-->
+                    </div>
+                    <div class="receipt80g">
+                        <input type="checkbox" value="Yes" name="Receipt80g" id="Receipt80g">
+                        <label for="Receipt80g">Do you want 80G receipt?</label>
+                    </div>
+                    <div class="panno hide">
+                        <div class="field">
+                            <input type="text" name="PanNo" id="PanNo" value="" placeholder="Enter PAN Number">
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Proceed" class="btn">
+                    </div>
+                </div>
+
+            
+            <div class="tContent">
+                <form name="donorLoginForm" id="donorLoginForm" action="/json/donate-authenticate.php" method="post" enctype="multipart/form-data">
+                    <div class="formMess"></div>
+                    <div class="field">
+                        <input type="text" name="LEmailId" placeholder="Email Address">
+                    </div>
+                    <div class="field">
+                        <input type="password" name="LPassword" placeholder="Password">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Login" class="loginbtn btn">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div></form>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Adoption program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Headquarters</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Membersip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Other NGO's</h4>
+          <ul>
+            <li><a href="#">Give India Foundation</a></li>
+            <li><a href="#">Goonj</a></li>
+            <li><a href="#">Oxfam India</a></li>
+            <li><a href="#">BRAC</a></li>
+          </ul>
+        </div>
+        <div class="footer-col colcol">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+    
+    <script>
+      var navLinks = document.getElementById("navLinks");
+  
+  function showMenu() {
+    navLinks.style.right = "0";
+  }
+  
+  function hideMenu() {
+    navLinks.style.right = "-200px";
+  }
+    </script>
+  
+  
